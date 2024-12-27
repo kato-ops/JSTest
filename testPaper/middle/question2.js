@@ -22,4 +22,5 @@
 
 export const priceCalculator = (price, isTakeOut) => {
   //ここを記述
+  return Math.floor(price * (isTakeOut ? 1.08 : 1.1));
 };
