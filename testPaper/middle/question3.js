@@ -15,4 +15,11 @@
  */
 export const sumAndAverage = (array) => {
   //ここに記述
+  const sum = array.reduce(
+    (accumulator, currentValue) => accumulator + currentValue,
+  );
+  return {
+    sum,
+    average: sum / array.length,
+  };
 };
