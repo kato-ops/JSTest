@@ -25,7 +25,7 @@ const TestComponent1 = ({ userName }) => {
       <span style={{ textDecoration: completed ? "line-through" : "none" }}>
         {userName}
       </span>
-      <button onClick={setCompleted(!completed)}>
+      <button onClick={() => setCompleted(!completed)}>
         {completed ? "完了取消" : "完了"}
       </button>
     </li>
