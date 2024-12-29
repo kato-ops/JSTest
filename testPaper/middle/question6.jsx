@@ -14,6 +14,22 @@
  * @param {{userName:string}} props
  * @returns {ReactNode}
  */
-const TestComponent1 = ({ userName }) => {};
+
+import { useState } from "react";
+
+const TestComponent1 = ({ userName }) => {
+  const [completed, setCompleted] = useState(false);
+
+  return (
+    <li>
+      <span style={{ textDecoration: completed ? "line-through" : "none" }}>
+        {userName}
+      </span>
+      <button onClick={() => setCompleted(!completed)}>
+        {completed ? "完了取消" : "完了"}
+      </button>
+    </li>
+  );
+};
 
 export default TestComponent1;

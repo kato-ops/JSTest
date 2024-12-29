@@ -18,4 +18,12 @@
  */
 export const toggleArrayElement = (array, ele) => {
   //ここに記述
+  if (array.includes(ele)) {
+    return array.toSpliced(
+      array.findIndex((e) => e === ele),
+      1,
+    );
+  } else {
+    return [...array, ele];
+  }
 };
